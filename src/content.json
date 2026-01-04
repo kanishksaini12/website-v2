@@ -1,6 +1,6 @@
 {
   "hero": {
-    "image": "src/assets/Headshot.png",
+    "image": "/Headshot.png",
     "title": "Kanishk",
     "status": "Frontend Developer",
     "headline": {
@@ -14,7 +14,7 @@
   "navbar": {
     "logo": "KS",
     "links": [
-      { "label": "Resume", "href": "src/assets/Kanishk_Saini_Resume.pdf" },
+      { "label": "Resume", "href": "/Kanishk_Saini_Resume.pdf" },
       { "label": "Work", "href": "#work" },
       { "label": "Experience", "href": "#experience" },
       { "label": "About", "href": "#about" },

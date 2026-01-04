@@ -21,10 +21,8 @@ const Navbar = ({ theme, toggleTheme, menuOpen, setMenuOpen }) => {
             link.label === "Resume" ? (
               <span
                 key={index}
-                className="hover:text-[var(--accent)] transition-colors"
-                onClick={() =>
-                  window.open("src/assets/Kanishk_Saini_Resume.pdf", "_blank")
-                }
+                className="hover:text-[var(--accent)] transition-colors cursor-pointer"
+                onClick={() => window.open(link.href, "_blank")}
               >
                 {link.label}
               </span>
