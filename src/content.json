@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "image": "src/assets/Headshot.png",
+    "title": "Kanishk",
+    "status": "Frontend Developer",
+    "headline": {
+      "prefix": "Building",
+      "highlight": "Systems",
+      "suffix": "that Scale."
+    },
+    "description": "I design and own frontend systems that scale across teams and products, focusing on performance, reliability, and maintainable architecture. My work bridges product goals with engineering decisions to deliver consistent, high-quality user experiences",
+    "buttonText": "See My Work"
+  },
+  "navbar": {
+    "logo": "KS",
+    "links": [
+      { "label": "Resume", "href": "src/assets/Kanishk_Saini_Resume.pdf" },
+      { "label": "Work", "href": "#work" },
+      { "label": "Experience", "href": "#experience" },
+      { "label": "About", "href": "#about" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "projects": {
+    "sectionNumber": "(01)",
+    "sectionTitle": "Work",
+    "sectionPeriod": "2021 — 2026",
+    "items": [
+      {
+        "title": "Expensio",
+        "category": "React / Node.js",
+        "year": "2025",
+        "description": "Expensio is a comprehensive expense tracking platform designed to streamline financial management. The website featured intuitive interfaces for logging expenses, categorizing transactions, and generating instant, detailed reports. Users could effortlessly monitor their spending patterns, set budgets, and gain insights through real-time analytics.",
+        "url": "https://xpensio-eaoh.onrender.com"
+      },
+      {
+        "title": "ESG Reporting",
+        "category": "React / Node.js",
+        "year": "2024",
+        "description": "ESG Reporting is a platform designed to help companies manage and report on their environmental, social, and governance (ESG) performance. The website featured intuitive interfaces for logging expenses, categorizing transactions, and generating instant, detailed reports. Users could effortlessly monitor their spending patterns, set budgets, and gain insights through real-time analytics."
+      },
+      {
+        "title": "Dynamic Forms & Grid",
+        "category": "Angular",
+        "year": "2023",
+        "description": "Developed internal tools like customizable grid and form components, empowering streamlined data management and user interaction. These tools offer flexibility and efficiency, enhancing operational workflows with tailored solutions for diverse organizational needs."
+      },
+      {
+        "title": "Weather Forecast",
+        "category": "React",
+        "year": "2022",
+        "description": "Experience real-time weather updates with our innovative app. Track temperature, humidity, and forecasts seamlessly tailored to your location. Stay ahead with reliable insights, ensuring you're prepared for any weather conditions.",
+        "url": "https://weather-app-qc4u.onrender.com/"
+      }
+    ],
+    "viewAllText": "View All Projects"
+  },
+  "experience": {
+    "sectionNumber": "(02)",
+    "sectionTitle": "Experience",
+    "items": [
+      {
+        "role": "Software Engineer II",
+        "company": "NinjaVan",
+        "period": "2024 — Present",
+        "desc": "Leading the modernization of a large-scale web platform, enabling faster feature delivery, better cross-team collaboration, and improved long-term reliability. Mentoring junior developers."
+      },
+      {
+        "role": "Software Engineer",
+        "company": "QiO Technologies",
+        "period": "2021 — 2024",
+        "desc": "Built high-impact frontend systems powering enterprise analytics and AI workflows, translating complex backend capabilities into intuitive, high-performance user experiences."
+      }
+    ]
+  },
+  "about": {
+    "sectionNumber": "(03)",
+    "sectionTitle": "About",
+    "title": {
+      "main": "More than just",
+      "highlight": "writing code."
+    },
+    "description": "I’m a senior frontend engineer who owns frontend systems end-to-end, from architectural decisions to production impact. I focus on building scalable, performant platforms and helping teams ship with confidence through clear standards, thoughtful trade-offs, and long-term thinking.",
+    "skills": [
+      "Frontend Architecture & Ownership",
+      "Cross-Team Collaboration",
+      "Performance & Reliability at Scale"
+    ],
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
+    "imageLabel": "Curious? See my resume"
+  },
+  "footer": {
+    "title": "LET'S TALK",
+    "email": "kanishk.saini12@gmail.com",
+    "socials": [
+      { "platform": "Github", "url": "https://github.com/kanishksaini12" },
+      { "platform": "Mail", "url": "#" },
+      {
+        "platform": "Linkedin",
+        "url": "https://www.linkedin.com/in/saini-kanishk/"
+      }
+    ],
+    "copyright": "© 2026 Kanishk Saini. All Rights Reserved."
+  }
+}
