@@ -34,7 +34,7 @@ const Hero = () => {
       </div>
 
       {/* Mobile Status - Absolute Positioned to Section */}
-      <div className="md:hidden absolute top-28 left-6 z-40">
+      <div className="md:hidden absolute top-28 left-6 z-30">
         <p className="font-mono text-xs text-[var(--accent)] flex items-center gap-2">
           <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse" />
           {status}

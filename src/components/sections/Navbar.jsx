@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import MagneticButton from "../ui/MagneticButton";
 import content from "../../content.json";
 
 const Navbar = ({ theme, toggleTheme, menuOpen, setMenuOpen }) => {
   const { logo, links } = content.navbar;
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [menuOpen]);
 
   return (
     <>

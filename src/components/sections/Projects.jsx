@@ -18,7 +18,6 @@ const ProjectRow = ({
   isHovered,
   anyHovered,
 }) => {
-  console.log(url);
   return (
     <FadeIn delay={index * 100} className="w-full">
       <div
