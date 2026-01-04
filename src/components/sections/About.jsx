@@ -10,6 +10,7 @@ const About = () => {
     skills,
     image,
     imageLabel,
+    resume,
   } = content.about;
 
   return (
@@ -58,9 +59,7 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)] to-transparent opacity-20 mix-blend-multiply pointer-events-none" />
 
             <div
-              onClick={() =>
-                window.open("src/assets/Kanishk_Saini_Resume.pdf", "_blank")
-              }
+              onClick={() => window.open(resume, "_blank")}
               className="absolute bottom-6 left-6 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10"
             >
               <div className="text-xs font-mono text-white flex items-center gap-2">
