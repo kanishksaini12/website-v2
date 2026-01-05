@@ -39,7 +39,7 @@ const Hero = () => {
           <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse" />
           {status}
         </p>
-        <div className="md:static w-full md:w-1/3 mb-auto md:mb-32 md:-translate-y-20 pointer-events-auto flex flex-col items-end md:items-start text-left md:text-left">
+        <div className="md:static w-full md:w-1/3 mb-auto md:mb-32 md:-translate-y-20 pointer-events-auto flex flex-col items-end md:items-start text-left md:text-left interactive">
           <FadeIn delay={200}>
             <div className="flex flex-col gap-4 items-end md:items-start">
               <p className="hidden md:flex font-mono text-xs text-[var(--accent)] items-center gap-2">
@@ -78,7 +78,7 @@ const Hero = () => {
                   <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse" />
                   {status}
                 </p>
-                <h2 className="text-5xl md:text-6xl font-medium tracking-tight leading-[0.9] text-white">
+                <h2 className="text-5xl md:text-6xl font-medium tracking-tight leading-[0.9] text-white interactive">
                   {headline.prefix} <br />
                   <span className="text-[var(--accent)] font-serif italic">
                     {headline.highlight}
@@ -100,7 +100,7 @@ const Hero = () => {
               </div>
               <div className="mt-6 md:mt-8 w-full md:w-auto">
                 <MagneticButton
-                  href="#work"
+                  href="#projects"
                   className="w-full md:w-auto text-center border border-neutral-700 px-6 py-3 rounded-full text-xs font-mono uppercase tracking-widest text-white hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-black transition-all bg-black/50 md:bg-transparent"
                 >
                   {buttonText}

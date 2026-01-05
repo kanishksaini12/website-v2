@@ -29,7 +29,7 @@ const About = () => {
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
         <div>
-          <h2 className="text-5xl md:text-7xl font-medium tracking-tighter mb-12">
+          <h2 className="text-5xl md:text-7xl font-medium tracking-tighter mb-12 interactive">
             {title.main} <br />{" "}
             <span className="text-neutral-400 font-serif italic">
               {title.highlight}
@@ -38,7 +38,7 @@ const About = () => {
           <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed mb-8">
             {description}
           </p>
-          <ul className="space-y-4 font-mono text-sm text-[var(--accent)]">
+          <ul className="space-y-4 font-mono text-sm text-[var(--accent)] interactive">
             {skills.map((skill, index) => (
               <li key={index} className="flex items-center gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-current" />

@@ -27,13 +27,9 @@ const Footer = () => {
 
       <div className="max-w-[100rem] mx-auto text-center md:text-left">
         <div className="inline-block relative">
-          <h2 className="text-[12vw] leading-none font-bold tracking-tighter hover:text-[var(--accent)] transition-colors duration-500 cursor-pointer">
+          <h2 className="text-[12vw] leading-none font-bold tracking-tighter transition-colors duration-500 interactive">
             {title}
           </h2>
-          <a
-            href={`mailto:${email}`}
-            className="absolute top-0 right-0 w-full h-full"
-          />
         </div>
 
         <div className="mt-24 flex flex-col md:flex-row justify-between items-center gap-8">

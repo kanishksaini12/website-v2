@@ -15,15 +15,15 @@
     "logo": "KS",
     "links": [
       { "label": "Resume", "href": "/Kanishk_Saini_Resume.pdf" },
-      { "label": "Work", "href": "#work" },
+      { "label": "Projects", "href": "#projects" },
       { "label": "Experience", "href": "#experience" },
-      { "label": "About", "href": "#about" },
+      { "label": "About Me", "href": "#about" },
       { "label": "Contact", "href": "#contact" }
     ]
   },
   "projects": {
     "sectionNumber": "(01)",
-    "sectionTitle": "Work",
+    "sectionTitle": "Projects",
     "sectionPeriod": "2021 — 2026",
     "items": [
       {
@@ -75,7 +75,7 @@
   },
   "about": {
     "sectionNumber": "(03)",
-    "sectionTitle": "About",
+    "sectionTitle": "About Me",
     "title": {
       "main": "More than just",
       "highlight": "writing code."

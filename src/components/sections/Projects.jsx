@@ -58,7 +58,7 @@ const ProjectRow = ({
                   onClick={() => window.open(url, "_blank")}
                   className="mt-4 pl-4 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[var(--accent)]"
                 >
-                  View Case Study <ArrowUpRight size={14} />
+                  View Project <ArrowUpRight size={14} />
                 </div>
               )}
             </div>
@@ -82,8 +82,8 @@ const Projects = () => {
 
   return (
     <section
-      id="work"
-      className="py-32 bg-white dark:bg-[#080808] relative z-10 rounded-t-[3rem] min-h-screen"
+      id="projects"
+      className="pt-32 bg-white dark:bg-[#080808] relative z-10 rounded-t-[3rem] min-h-screen"
     >
       <div className="px-6 md:px-12 mb-16 flex items-end justify-between">
         <div className="flex items-center gap-4">
