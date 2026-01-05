@@ -15,6 +15,7 @@ const Hero = () => {
           <img
             src={image}
             alt="Portrait"
+            fetchPriority="high"
             className="w-full h-full object-cover object-top mask-image-gradient grayscale-[10%] contrast-110 brightness-105"
             style={{
               maskImage:
