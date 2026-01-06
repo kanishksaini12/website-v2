@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 // Utility for class merging
 const cn = (...classes) => classes.filter(Boolean).join(" ");
 
-const MagneticButton = ({ children, className, href, onClick }) => {
+const MagneticButton = ({ children, className, href, onClick, ...props }) => {
   const btnRef = useRef(null);
   const handleMouseMove = (e) => {
     const btn = btnRef.current;
@@ -28,6 +28,7 @@ const MagneticButton = ({ children, className, href, onClick }) => {
         "interactive inline-block transition-transform duration-200 ease-out cursor-pointer",
         className
       )}
+      {...props}
     >
       {children}
     </Component>
