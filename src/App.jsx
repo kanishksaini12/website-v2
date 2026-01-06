@@ -38,6 +38,12 @@ const App = () => {
     <div
       className={`relative min-h-screen bg-[#FDFDFC] dark:bg-[#050505] text-[#111111] dark:text-[#EAEAEA] font-sans selection:bg-[var(--accent)] selection:text-black overflow-x-hidden transition-colors duration-700`}
     >
+      <a
+        href="#main-content"
+        className="fixed top-4 left-4 z-[100] -translate-y-[150%] focus:translate-y-0 bg-[var(--accent)] text-black px-4 py-2 rounded-md font-bold transition-transform"
+      >
+        Skip to Content
+      </a>
       <Preloader onComplete={() => setLoading(false)} />
 
       {!loading && (

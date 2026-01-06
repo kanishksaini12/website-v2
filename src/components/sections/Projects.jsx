@@ -20,9 +20,9 @@ const ProjectRow = ({
 }) => {
   return (
     <FadeIn delay={index * 100} className="w-full">
-      <div
+      <li
         className={cn(
-          "interactive group relative border-t border-neutral-200 dark:border-neutral-800 py-16 md:py-20 cursor-none hover:bg-neutral-50 dark:hover:bg-neutral-900/30 transition-all duration-500 z-30",
+          "relative group border-t border-neutral-200 dark:border-neutral-800 py-16 md:py-20 transition-all duration-500 z-30",
           anyHovered && !isHovered
             ? "opacity-30 blur-[1px] scale-[0.99]"
             : "opacity-100 scale-100"
@@ -30,47 +30,61 @@ const ProjectRow = ({
         onMouseEnter={() => onHover(index)}
         onMouseLeave={() => onHover(null)}
       >
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline px-6">
-          <div className="md:col-span-1 text-neutral-400 font-mono text-xs">
+        {/* Full-size trigger button for accessibility and click handling */}
+        <button
+          className="absolute inset-0 w-full h-full z-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-inset text-left"
+          onClick={() => onHover(isHovered ? null : index)}
+          aria-expanded={isHovered}
+          aria-controls={`project-details-${index}`}
+          aria-label={`View details for ${title}`}
+        />
+
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline px-6 pointer-events-none">
+          <div className="md:col-span-1 text-neutral-400 font-mono text-xs relative z-10">
             0{index + 1}
           </div>
 
-          <div className="md:col-span-8">
+          <div className="md:col-span-8 relative z-10">
             <h3 className="text-4xl md:text-7xl font-medium tracking-tighter text-neutral-900 dark:text-white transition-all duration-300 group-hover:translate-x-4 group-hover:text-[var(--accent)]">
               {title}
             </h3>
 
             {/* Expanded Description (Accordion Style) */}
             <div
+              id={`project-details-${index}`}
               className={cn(
                 "overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]",
                 isHovered
-                  ? "max-h-[1000px] opacity-100 translate-y-4"
-                  : "max-h-0 opacity-0 translate-y-0"
+                  ? "max-h-[1000px] opacity-100 translate-y-4 visible"
+                  : "max-h-0 opacity-0 translate-y-0 invisible"
               )}
+              aria-hidden={!isHovered}
             >
               <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed pt-2 pl-4 border-l-2 border-[var(--accent)]">
                 {description}
               </p>
 
               {url && (
-                <div
-                  onClick={() => window.open(url, "_blank")}
-                  className="mt-4 pl-4 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[var(--accent)]"
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 pl-4 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[var(--accent)] hover:underline focus:underline outline-none pointer-events-auto w-fit"
+                  onClick={(e) => e.stopPropagation()} // Prevent toggling row
                 >
                   View Project <ArrowUpRight size={14} />
-                </div>
+                </a>
               )}
             </div>
           </div>
 
-          <div className="md:col-span-3 flex flex-col items-start md:items-end mt-4 md:mt-0">
+          <div className="md:col-span-3 flex flex-col items-start md:items-end mt-4 md:mt-0 relative z-10">
             <span className="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-2 border border-neutral-200 dark:border-neutral-800 px-3 py-1 rounded-full">
               {category}
             </span>
           </div>
         </div>
-      </div>
+      </li>
     </FadeIn>
   );
 };
@@ -99,7 +113,7 @@ const Projects = () => {
         </span>
       </div>
 
-      <div className="relative">
+      <ul className="relative">
         {items.map((p, i) => (
           <ProjectRow
             key={i}
@@ -110,7 +124,7 @@ const Projects = () => {
             anyHovered={hoveredProject !== null}
           />
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

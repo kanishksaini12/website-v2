@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="relative w-full h-full">
           <img
             src={image}
-            alt="Portrait"
+            alt="Portrait of Kanishk Saini"
             fetchPriority="high"
             className="w-full h-full object-cover object-top mask-image-gradient grayscale-[10%] contrast-110 brightness-105"
             style={{
