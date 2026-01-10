@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const Preloader = ({ onComplete }) => {
   const [count, setCount] = useState(0);
   const [phase, setPhase] = useState("counting");
 
   useEffect(() => {
-    const duration = 1500;
+    const duration = 1200;
     const steps = 20;
     const intervalTime = duration / steps;
 
@@ -30,16 +30,16 @@ const Preloader = ({ onComplete }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[10001] bg-[#111] flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] ${
+      className={`fixed inset-0 z-[10001] bg-[#FDFDFC] dark:bg-[#111] flex items-center justify-center transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] ${
         phase === "finished" ? "-translate-y-full" : "translate-y-0"
       }`}
     >
       <div className="relative">
-        <div className="text-[15vw] md:text-[10vw] font-bold text-[#CCFF00] font-mono leading-none tracking-tighter">
+        <div className="text-[15vw] md:text-[10vw] font-bold text-[var(--accent)] font-mono leading-none tracking-tighter">
           {count}%
         </div>
-        <div className="absolute -bottom-8 left-1 text-white font-mono text-xs uppercase tracking-widest flex items-center gap-2">
-          <span className="w-2 h-2 bg-[#CCFF00] animate-ping" />
+        <div className="absolute -bottom-8 left-1 text-[#111] dark:text-white font-mono text-xs uppercase tracking-widest flex items-center gap-2">
+          <span className="w-2 h-2 bg-[var(--accent)] animate-ping" />
           System Booting
         </div>
       </div>
