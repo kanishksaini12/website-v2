@@ -17,21 +17,29 @@ import Footer from "./components/sections/Footer";
  */
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState("dark");
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Initialize theme from localStorage or default to 'light'
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("portfolio-theme-preference") || "light";
+    }
+    return "light";
+  });
+
+  // Sync theme with DOM and localStorage
   useEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
+    const root = document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+    localStorage.setItem("portfolio-theme-preference", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    if (newTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   return (
@@ -46,30 +54,28 @@ const App = () => {
       </a>
       <Preloader onComplete={() => setLoading(false)} />
 
-      {!loading && (
-        <>
-          <CustomCursor />
-          <Grain />
+      <CustomCursor />
+      <Grain />
 
-          {/* --- Sections --- */}
-          <Navbar
-            theme={theme}
-            toggleTheme={toggleTheme}
-            menuOpen={menuOpen}
-            setMenuOpen={setMenuOpen}
-          />
+      {/* --- Sections --- */}
+      <Navbar
+        theme={theme}
+        toggleTheme={toggleTheme}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+      />
 
-          <Hero />
+      <main id="main-content" role="main">
+        <Hero />
 
-          <Projects />
+        <Projects />
 
-          <Experience />
+        <Experience />
 
-          <About />
+        <About />
+      </main>
 
-          <Footer />
-        </>
-      )}
+      <Footer />
     </div>
   );
 };

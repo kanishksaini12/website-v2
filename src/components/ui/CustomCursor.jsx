@@ -50,10 +50,12 @@ const CustomCursor = () => {
     <>
       <div
         ref={cursorRef}
+        aria-hidden="true"
         className="hidden md:block fixed top-0 left-0 w-6 h-6 border border-neutral-500 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out will-change-transform mix-blend-exclusion"
       />
       <div
         ref={cursorInnerRef}
+        aria-hidden="true"
         className="hidden md:block fixed top-0 left-0 w-1 h-1 bg-[var(--accent)] rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2"
       />
     </>
