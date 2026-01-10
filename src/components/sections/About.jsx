@@ -58,15 +58,18 @@ const About = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)] to-transparent opacity-20 mix-blend-multiply pointer-events-none" />
 
-            <div
-              onClick={() => window.open(resume, "_blank")}
-              className="absolute bottom-6 left-6 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10"
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Resume"
+              className="absolute bottom-6 left-6 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 hover:bg-black/70 transition-colors"
             >
               <div className="text-xs font-mono text-white flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full animate-pulse" />
                 {imageLabel}
               </div>
-            </div>
+            </a>
           </div>
           {/* Shadow element */}
           <div className="absolute -bottom-10 left-10 w-[90%] h-10 bg-[var(--accent)] blur-[50px] opacity-20" />

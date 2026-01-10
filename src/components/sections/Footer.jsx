@@ -39,6 +39,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={`mailto:${email}`}
+                  aria-label={`Send an email to ${email}`}
                   className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[var(--accent)] hover:text-black hover:border-transparent transition-all"
                 >
                   {getIcon(social.platform)}
@@ -47,6 +48,9 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit my ${social.platform} profile`}
                   className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[var(--accent)] hover:text-black hover:border-transparent transition-all"
                 >
                   {getIcon(social.platform)}

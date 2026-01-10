@@ -59,13 +59,15 @@ const App = () => {
             setMenuOpen={setMenuOpen}
           />
 
-          <Hero />
+          <main id="main-content" role="main">
+            <Hero />
 
-          <Projects />
+            <Projects />
 
-          <Experience />
+            <Experience />
 
-          <About />
+            <About />
+          </main>
 
           <Footer />
         </>
