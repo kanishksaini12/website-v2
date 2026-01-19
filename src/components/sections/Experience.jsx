@@ -1,10 +1,11 @@
 import React from "react";
 import FadeIn from "../ui/FadeIn";
+import { ArrowUpRight } from "lucide-react";
 import content from "../../content.json";
 
-const ExperienceRow = ({ role, company, period, desc, index }) => (
+const ExperienceRow = ({ role, company, period, desc, url, index }) => (
   <FadeIn delay={index * 100} className="w-full">
-    <div className="group interactive grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-b border-neutral-200 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-900/30 transition-colors px-6">
+    <div className="group interactive grid grid-cols-1 md:grid-cols-12 gap-8 py-12 border-b border-neutral-200 dark:border-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-900/30 transition-colors px-6 relative">
       <div className="md:col-span-3">
         <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 group-hover:text-[var(--accent)] transition-colors">
           {period}
@@ -14,7 +15,26 @@ const ExperienceRow = ({ role, company, period, desc, index }) => (
         <h4 className="text-2xl font-medium text-neutral-900 dark:text-white mb-2 group-hover:text-[var(--accent)]">
           {role}
         </h4>
-        <p className="text-neutral-500 font-serif italic">{company}</p>
+        {url ? (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit ${company} website`}
+            className="inline-flex items-center gap-2 text-neutral-500 font-serif italic group-hover:text-[var(--secondary-accent)] transition-colors group/link relative z-20"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {company}
+            <span className="sr-only">(opens in a new tab)</span>
+            <ArrowUpRight
+              size={14}
+              aria-hidden="true"
+              className="opacity-0 -translate-y-1 -translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300"
+            />
+          </a>
+        ) : (
+          <p className="text-neutral-500 font-serif italic">{company}</p>
+        )}
       </div>
       <div className="md:col-span-4">
         <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">

@@ -8,11 +8,11 @@ const Footer = () => {
   const getIcon = (platform) => {
     switch (platform.toLowerCase()) {
       case "github":
-        return <Github size={20} />;
+        return <Github size={24} />;
       case "linkedin":
-        return <Linkedin size={20} />;
+        return <Linkedin size={24} />;
       case "mail":
-        return <MailIcon size={20} />;
+        return <MailIcon size={24} />;
       default:
         return null;
     }
@@ -40,7 +40,7 @@ const Footer = () => {
                   key={index}
                   href={`mailto:${email}`}
                   aria-label={`Send an email to ${email}`}
-                  className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[var(--accent)] hover:text-black hover:border-transparent transition-all"
+                  className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center hover:bg-[var(--accent)] hover:text-black hover:border-transparent transition-all"
                 >
                   {getIcon(social.platform)}
                 </a>
@@ -51,11 +51,11 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit my ${social.platform} profile`}
-                  className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-[var(--accent)] hover:text-black hover:border-transparent transition-all"
+                  className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center hover:bg-[var(--accent)] hover:text-black hover:border-transparent transition-all"
                 >
                   {getIcon(social.platform)}
                 </a>
-              )
+              ),
             )}
           </div>
           <div className="text-neutral-500 font-mono text-xs uppercase tracking-widest">

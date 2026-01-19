@@ -61,14 +61,16 @@
     "items": [
       {
         "role": "Software Engineer II",
-        "company": "NinjaVan",
+        "company": "Ninja Van",
         "period": "2024 — Present",
+        "url": "https://www.ninjavan.co/en-sg/",
         "desc": "Leading the modernization of a large-scale web platform, enabling faster feature delivery, better cross-team collaboration, and improved long-term reliability. Mentoring junior developers."
       },
       {
         "role": "Software Engineer",
         "company": "QiO Technologies",
         "period": "2021 — 2024",
+        "url": "https://qio.io",
         "desc": "Built high-impact frontend systems powering enterprise analytics and AI workflows, translating complex backend capabilities into intuitive, high-performance user experiences."
       }
     ]

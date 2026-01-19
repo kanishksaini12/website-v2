@@ -25,7 +25,7 @@ const ProjectRow = ({
           "relative group border-t border-neutral-200 dark:border-neutral-800 py-16 md:py-20 transition-all duration-500 z-30",
           anyHovered && !isHovered
             ? "opacity-30 blur-[1px] scale-[0.99]"
-            : "opacity-100 scale-100"
+            : "opacity-100 scale-100",
         )}
         onMouseEnter={() => onHover(index)}
         onMouseLeave={() => onHover(null)}
@@ -56,7 +56,7 @@ const ProjectRow = ({
                 "overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]",
                 isHovered
                   ? "max-h-[1000px] opacity-100 translate-y-4 visible"
-                  : "max-h-0 opacity-0 translate-y-0 invisible"
+                  : "max-h-0 opacity-0 translate-y-0 invisible",
               )}
               aria-hidden={!isHovered}
             >
@@ -69,7 +69,7 @@ const ProjectRow = ({
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 pl-4 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[var(--accent)] hover:underline focus:underline outline-none pointer-events-auto w-fit"
+                  className="mt-4 pl-4 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[var(--secondary-accent)] hover:underline focus:underline outline-none pointer-events-auto w-fit"
                   onClick={(e) => e.stopPropagation()} // Prevent toggling row
                 >
                   View Project <ArrowUpRight size={14} />
