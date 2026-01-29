@@ -13,7 +13,7 @@ const Navbar = ({ theme, toggleTheme, menuOpen, setMenuOpen }) => {
       const mobileMenu = document.getElementById("mobile-menu");
       if (mobileMenu) {
         const focusableElements = mobileMenu.querySelectorAll(
-          'a, button, [tabindex]:not([tabindex="-1"])'
+          'a, button, [tabindex]:not([tabindex="-1"])',
         );
         const firstElement = focusableElements[0];
         const lastElement = focusableElements[focusableElements.length - 1];
@@ -52,7 +52,7 @@ const Navbar = ({ theme, toggleTheme, menuOpen, setMenuOpen }) => {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 w-full z-50 py-8 px-6 md:px-12 flex justify-between items-center mix-blend-difference text-white"
+        className="fixed top-0 left-0 w-full z-50 py-8 px-6 md:px-12 flex justify-between items-center mix-blend-difference backdrop-blur-md text-white"
         role="navigation"
         aria-label="Main"
       >
