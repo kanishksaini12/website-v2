@@ -61,8 +61,15 @@
     "items": [
       {
         "role": "Software Engineer II",
+        "company": "Microsoft",
+        "period": "2026 — Present",
+        "url": "https://www.microsoft.com/en-in",
+        "desc": "Building Microsoft Teams Devices (CMD), building scalable cloud services and device-connected experiences that power enterprise collaboration and meeting solutions."
+      },
+      {
+        "role": "Software Engineer II",
         "company": "Ninja Van",
-        "period": "2024 — Present",
+        "period": "2024 — 2026",
         "url": "https://www.ninjavan.co/en-sg/",
         "desc": "Leading the modernization of a large-scale web platform, enabling faster feature delivery, better cross-team collaboration, and improved long-term reliability. Mentoring junior developers."
       },
